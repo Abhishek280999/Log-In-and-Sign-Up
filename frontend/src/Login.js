@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import "./LoginValidation"
+import validation from './LoginValidation'
+
 
 const Login = () => {
     const [value, setvalue] = useState({
@@ -29,12 +30,15 @@ const Login = () => {
                 <input type='email' placeholder='enter email' name='email' className='form-control rounded-0'
                  onChange={handleInput}
                 />
+                {error.email && <span className='text-danger'>{error.email}</span>}
              </div>
              <div className='mb-3'>
-                <label htmlFor='password'>Email</label>
+                <label htmlFor='password'>Password</label>
                 <input type='password' placeholder='enter password' name='password' className='form-control rounded-0'
                     onChange={handleInput}
                 />
+                {error.password && <span className='text-danger'>{error.password}</span>}
+
              </div>
              <button type='submit' className='btn btn-success w-100'>Log In</button>
              <p>You are agree to aour trems and policites</p>
