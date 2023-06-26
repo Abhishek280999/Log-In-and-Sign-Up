@@ -1,4 +1,4 @@
-function validation(value){
+function Validation(value){
     let error = {}
     const email_pattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
     const password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/
@@ -27,4 +27,4 @@ function validation(value){
     return error;
 
 }
-export default validation
+export default Validation

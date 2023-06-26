@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Validation from './SignupValidation'
+
 
 
 const SignUp = () => {
@@ -13,7 +15,7 @@ const SignUp = () => {
     })
     const handleSubmit = (event) => {
         event.preventDefault()
-        seterror(validation(value))
+        seterror(Validation(value))
 
     };
     const handleInput = (event) => {
